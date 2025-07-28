@@ -1,0 +1,1524 @@
+<!-- 
+    This is a multi-file HTML prototype. To use this output:
+    1. Create a folder for your project.
+    2. Create an 'index.html' file and copy the content between '<!-- index.html content starts here -->' and '<!-- index.html content ends here -->' into it.
+    3. Repeat this process for 'login.html', 'signup.html', 'dashboard.html', 'tasks.html', and 'settings.html', creating separate files for each.
+    4. Ensure all these HTML files are in the same directory.
+    5. Open 'index.html' in your browser to start the prototype.
+-->
+
+<!-- index.html content starts here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Prototype Index</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            margin: -25px -25px 25px -25px; /* Adjust to sit inside container */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        /* Navigation/Link Section */
+        .prototype-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .prototype-links a {
+            display: block;
+            padding: 15px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .prototype-links a:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px 15px;
+                padding: 20px;
+            }
+
+            header {
+                padding: 15px;
+                margin: -20px -20px 20px -20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .prototype-links a {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Index Page Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>TaskFlow Prototype Wireframe</h1>
+            <p>Welcome to the interactive prototype for TaskFlow - a Productivity Tool web application.</p>
+        </header>
+
+        <!-- Prototype Screens Navigation -->
+        <section class="prototype-links">
+            <h2>Explore Prototype Screens:</h2>
+            <a href="login.html">1. Login Screen</a>
+            <a href="signup.html">2. Signup Screen</a>
+            <a href="dashboard.html">3. Dashboard Overview</a>
+            <a href="tasks.html">4. Task List Management</a>
+            <a href="settings.html">5. User Settings & Profile</a>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>This is a low-fidelity wireframe prototype. All content is placeholder.</p>
+            <p>For project documentation, please refer to the <a href="#documentation-info">linked document</a>.</p>
+            <!-- Documentation content, hidden but linked via anchor -->
+            <div id="documentation-info" style="display: none;">
+                <h3>Project Documentation Placeholder</h3>
+                <p>This section would contain details about the project goals, target audience, and core features.</p>
+                <ul>
+                    <li>Project Name: TaskFlow</li>
+                    <li>Project Type: Web app / Productivity Tool</li>
+                    <li>Target Audience: Small businesses, freelancers, project managers</li>
+                    <li>Core Features: Task management, Project overview, User profiles, Authentication.</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<!-- index.html content ends here -->
+
+<!-- login.html content starts here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Login</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container for Login Form */
+        .login-container {
+            max-width: 400px;
+            width: 90%;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            color: #007bff;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        /* Form Group Styles */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 12px 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        .form-group input[type="email"]:focus,
+        .form-group input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        /* Button Styles */
+        .button {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* For anchor tags styled as buttons */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Links */
+        .links-bottom {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .links-bottom a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .links-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Page Container -->
+    <div class="login-container">
+        <!-- Header Section -->
+        <header>
+            <h1>Login to TaskFlow</h1>
+            <p>Access your tasks and projects</p>
+        </header>
+
+        <!-- Login Form Section -->
+        <form action="dashboard.html" method="get">
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="button">Log In</button>
+        </form>
+
+        <!-- Bottom Links Section -->
+        <div class="links-bottom">
+            <a href="signup.html">Don't have an account? Sign Up</a>
+            <span>|</span>
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
+<!-- login.html content ends here -->
+
+<!-- signup.html content starts here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Sign Up</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container for Signup Form */
+        .signup-container {
+            max-width: 450px;
+            width: 90%;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            color: #28a745;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        /* Form Group Styles */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 12px 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="password"]:focus {
+            border-color: #28a745;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+        }
+
+        /* Button Styles */
+        .button {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Links */
+        .links-bottom {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .links-bottom a {
+            color: #28a745;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .links-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 480px) {
+            .signup-container {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Signup Page Container -->
+    <div class="signup-container">
+        <!-- Header Section -->
+        <header>
+            <h1>Create Your TaskFlow Account</h1>
+            <p>Start organizing your productivity today!</p>
+        </header>
+
+        <!-- Signup Form Section -->
+        <form action="dashboard.html" method="get">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="button">Sign Up</button>
+        </form>
+
+        <!-- Bottom Links Section -->
+        <div class="links-bottom">
+            <a href="login.html">Already have an account? Log In</a>
+            <span>|</span>
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
+<!-- signup.html content ends here -->
+
+<!-- dashboard.html content starts here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Dashboard</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Main Layout Wrapper */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .user-info {
+            font-size: 0.9em;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #e9ecef;
+            padding: 10px 20px;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            justify-content: center;
+            gap: 15px; /* Spacing between nav items */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: bold;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex-grow: 1; /* Allows content to take up available space */
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fefefe;
+            border: 1px solid #e0e0e0;
+            border-radius: 7px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #495057;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .card .small-text {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: auto; /* Pushes footer to the bottom */
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 1.5em;
+                margin-bottom: 5px;
+            }
+            .user-info {
+                text-align: center;
+                margin-top: 5px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+            nav a {
+                width: calc(100% - 30px); /* Full width minus padding */
+                text-align: center;
+            }
+            .main-content {
+                margin: 15px;
+                padding: 15px;
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Overall Page Wrapper -->
+    <div class="wrapper">
+        <!-- Header Section -->
+        <header>
+            <h1>TaskFlow Dashboard</h1>
+            <div class="user-info">
+                <span>Welcome, John Doe!</span> | <a href="login.html" style="color: white; text-decoration: none;">Logout</a>
+            </div>
+        </header>
+
+        <!-- Main Navigation Bar -->
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="tasks.html">Tasks</a>
+            <a href="settings.html">Settings</a>
+            <a href="index.html">Home</a>
+        </nav>
+
+        <!-- Main Content Area: Dashboard Overview -->
+        <main class="main-content">
+            <!-- Section: Quick Stats -->
+            <div class="card">
+                <h3>Total Active Projects</h3>
+                <p>7</p>
+                <div class="small-text">Updated: 2023-10-27</div>
+            </div>
+
+            <div class="card">
+                <h3>Tasks Due This Week</h3>
+                <p>12</p>
+                <div class="small-text">Includes overdue tasks</div>
+            </div>
+
+            <div class="card">
+                <h3>Completed Tasks (Last 30 Days)</h3>
+                <p>45</p>
+                <div class="small-text">Good job!</div>
+            </div>
+
+            <div class="card">
+                <h3>Team Members</h3>
+                <p>5</p>
+                <div class="small-text">You + 4 others</div>
+            </div>
+
+            <!-- Section: Upcoming Milestones (Placeholder) -->
+            <div class="card" style="grid-column: 1 / -1;">
+                <h3>Upcoming Milestones</h3>
+                <ul>
+                    <li>Project Alpha - Phase 2 Review (Oct 30)</li>
+                    <li>Project Beta - Client Delivery (Nov 5)</li>
+                    <li>Project Gamma - Final Testing (Nov 12)</li>
+                </ul>
+                <a href="tasks.html" class="button" style="display: inline-block; margin-top: 15px; background-color: #28a745; text-decoration: none; color: white; padding: 10px 15px; border-radius: 5px;">View All Projects</a>
+            </div>
+
+            <!-- Section: Recent Activity (Placeholder) -->
+            <div class="card" style="grid-column: 1 / -1;">
+                <h3>Recent Activity Feed</h3>
+                <ul>
+                    <li>John Doe assigned "Review UI Mockups" to you.</li>
+                    <li>Project Alpha: "Develop Frontend" task completed.</li>
+                    <li>New task "Prepare Q4 Report" added by Admin.</li>
+                    <li>You updated "Fix Bug #123" status to In Progress.</li>
+                </ul>
+                <div class="small-text">Last updated 5 minutes ago</div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2023 TaskFlow Prototype. All rights reserved. <a href="index.html#documentation-info">About this Prototype</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+<!-- dashboard.html content ends here -->
+
+<!-- tasks.html content starts here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Tasks</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Main Layout Wrapper */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .user-info {
+            font-size: 0.9em;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #e9ecef;
+            padding: 10px 20px;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: bold;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex-grow: 1;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Task List Specific Styles */
+        .task-list-section h2 {
+            margin-top: 0;
+            color: #343a40;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .add-task-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+        }
+
+        .add-task-form input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            min-width: 200px; /* Ensure input is not too small */
+        }
+
+        .add-task-form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-task-form button:hover {
+            background-color: #218838;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #fefefe;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            flex-wrap: wrap; /* Allow wrapping task content */
+        }
+
+        .task-item.completed {
+            background-color: #e6ffe6;
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+
+        .task-item .task-details {
+            flex-grow: 1;
+            padding-right: 15px;
+            min-width: 150px;
+        }
+
+        .task-item .task-details strong {
+            display: block;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .task-item .task-details span {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .task-item .task-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px; /* For mobile wrap */
+        }
+
+        .task-item .task-actions button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: background-color 0.3s ease;
+        }
+
+        .task-item .task-actions .edit-btn {
+            background-color: #ffc107;
+            color: #333;
+        }
+
+        .task-item .task-actions .edit-btn:hover {
+            background-color: #e0a800;
+        }
+
+        .task-item .task-actions .delete-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .task-item .task-actions .delete-btn:hover {
+            background-color: #c82333;
+        }
+
+        .task-item .task-actions .complete-btn {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .task-item .task-actions .complete-btn:hover {
+            background-color: #138496;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: auto;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 1.5em;
+                margin-bottom: 5px;
+            }
+            .user-info {
+                text-align: center;
+                margin-top: 5px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+            nav a {
+                width: calc(100% - 30px);
+                text-align: center;
+            }
+            .main-content {
+                margin: 15px;
+                padding: 15px;
+            }
+            .add-task-form {
+                flex-direction: column;
+            }
+            .add-task-form input[type="text"] {
+                width: 100%;
+            }
+            .task-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .task-item .task-details {
+                padding-right: 0;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .task-item .task-actions {
+                width: 100%;
+                justify-content: center;
+                margin-top: 0;
+            }
+            .task-item .task-actions button {
+                flex-grow: 1; /* Make buttons fill available width */
+            }
+        }
+    </style>
+    <script>
+        // Simple JavaScript for marking tasks as complete (for prototype demonstration)
+        document.addEventListener('DOMContentLoaded', () => {
+            const taskList = document.getElementById('task-list');
+
+            taskList.addEventListener('click', (event) => {
+                if (event.target.classList.contains('complete-btn')) {
+                    const taskItem = event.target.closest('.task-item');
+                    if (taskItem) {
+                        taskItem.classList.toggle('completed');
+                        event.target.textContent = taskItem.classList.contains('completed') ? 'Undo' : 'Complete';
+                    }
+                } else if (event.target.classList.contains('delete-btn')) {
+                    const taskItem = event.target.closest('.task-item');
+                    if (taskItem && confirm('Are you sure you want to delete this task?')) {
+                        taskItem.remove();
+                    }
+                } else if (event.target.classList.contains('edit-btn')) {
+                    alert('Edit functionality not implemented in this wireframe.');
+                }
+            });
+
+            const addTaskForm = document.getElementById('add-task-form');
+            addTaskForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const taskInput = document.getElementById('new-task-input');
+                const taskText = taskInput.value.trim();
+
+                if (taskText) {
+                    const newTaskItem = document.createElement('div');
+                    newTaskItem.classList.add('task-item');
+                    newTaskItem.innerHTML = `
+                        <div class="task-details">
+                            <strong>${taskText}</strong>
+                            <span>Due: Placeholder Date | Project: General</span>
+                        </div>
+                        <div class="task-actions">
+                            <button class="complete-btn">Complete</button>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    `;
+                    taskList.appendChild(newTaskItem);
+                    taskInput.value = ''; // Clear input
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Overall Page Wrapper -->
+    <div class="wrapper">
+        <!-- Header Section -->
+        <header>
+            <h1>TaskFlow Tasks</h1>
+            <div class="user-info">
+                <span>Logged in as John Doe</span>
+            </div>
+        </header>
+
+        <!-- Main Navigation Bar -->
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="tasks.html" class="active">Tasks</a>
+            <a href="settings.html">Settings</a>
+            <a href="index.html">Home</a>
+        </nav>
+
+        <!-- Main Content Area: Task List Management -->
+        <main class="main-content">
+            <!-- Section: Add New Task -->
+            <section class="add-task-section">
+                <h2>Add New Task</h2>
+                <form id="add-task-form" class="add-task-form">
+                    <input type="text" id="new-task-input" placeholder="Enter new task description..." required>
+                    <button type="submit">Add Task</button>
+                </form>
+            </section>
+
+            <!-- Section: Task List -->
+            <section class="task-list-section">
+                <h2>My Tasks</h2>
+                <div id="task-list">
+                    <!-- Task Item 1 -->
+                    <div class="task-item">
+                        <div class="task-details">
+                            <strong>Design homepage wireframes</strong>
+                            <span>Due: Oct 30, 2023 | Project: TaskFlow UI</span>
+                        </div>
+                        <div class="task-actions">
+                            <button class="complete-btn">Complete</button>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Task Item 2 -->
+                    <div class="task-item">
+                        <div class="task-details">
+                            <strong>Review client feedback on dashboard layout</strong>
+                            <span>Due: Nov 1, 2023 | Project: Project Alpha</span>
+                        </div>
+                        <div class="task-actions">
+                            <button class="complete-btn">Complete</button>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Task Item 3 (Completed Example) -->
+                    <div class="task-item completed">
+                        <div class="task-details">
+                            <strong>Set up basic project structure</strong>
+                            <span>Completed: Oct 25, 2023 | Project: TaskFlow Backend</span>
+                        </div>
+                        <div class="task-actions">
+                            <button class="complete-btn">Undo</button>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Task Item 4 -->
+                    <div class="task-item">
+                        <div class="task-details">
+                            <strong>Prepare presentation for stakeholder meeting</strong>
+                            <span>Due: Nov 7, 2023 | Project: General Admin</span>
+                        </div>
+                        <div class="task-actions">
+                            <button class="complete-btn">Complete</button>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2023 TaskFlow Prototype. All rights reserved. <a href="index.html#documentation-info">About this Prototype</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+<!-- tasks.html content ends here -->
+
+<!-- settings.html content starts here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Settings</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Main Layout Wrapper */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .user-info {
+            font-size: 0.9em;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #e9ecef;
+            padding: 10px 20px;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: bold;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex-grow: 1;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Settings Section Styles */
+        .settings-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .settings-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .settings-section h2 {
+            margin-top: 0;
+            color: #343a40;
+            border-bottom: 2px solid #6c757d;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px; /* Space between label and input */
+        }
+
+        .form-group label {
+            flex-basis: 150px; /* Fixed width for labels */
+            text-align: right;
+            font-weight: bold;
+            color: #555;
+            padding-right: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group textarea,
+        .form-group select {
+            flex-grow: 1; /* Input takes remaining space */
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            min-width: 200px; /* Minimum width for inputs */
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="password"]:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            display: inline-block; /* For buttons not acting as full-width blocks */
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .button.save {
+            background-color: #28a745;
+        }
+
+        .button.save:hover {
+            background-color: #218838;
+        }
+
+        /* Toggle Switch for Notifications */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin-left: 10px; /* Spacing from label */
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: auto;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 1.5em;
+                margin-bottom: 5px;
+            }
+            .user-info {
+                text-align: center;
+                margin-top: 5px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+            nav a {
+                width: calc(100% - 30px);
+                text-align: center;
+            }
+            .main-content {
+                margin: 15px;
+                padding: 15px;
+            }
+            .form-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            .form-group label {
+                flex-basis: auto; /* Remove fixed width */
+                text-align: left;
+                padding-right: 0;
+            }
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group input[type="password"],
+            .form-group textarea,
+            .form-group select {
+                width: 100%; /* Full width */
+                min-width: unset;
+            }
+            .toggle-switch {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Overall Page Wrapper -->
+    <div class="wrapper">
+        <!-- Header Section -->
+        <header>
+            <h1>TaskFlow Settings</h1>
+            <div class="user-info">
+                <span>Logged in as John Doe</span>
+            </div>
+        </header>
+
+        <!-- Main Navigation Bar -->
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="tasks.html">Tasks</a>
+            <a href="settings.html" class="active">Settings</a>
+            <a href="index.html">Home</a>
+        </nav>
+
+        <!-- Main Content Area: User Settings -->
+        <main class="main-content">
+            <!-- Section: Profile Settings -->
+            <section class="settings-section">
+                <h2>Profile Information</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" id="full-name" name="full-name" value="John Doe" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" value="john.doe@example.com" placeholder="Your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Bio (Optional):</label>
+                        <textarea id="bio" name="bio" rows="3" placeholder="A short description about yourself..."></textarea>
+                    </div>
+                    <button type="submit" class="button save">Save Profile</button>
+                </form>
+            </section>
+
+            <!-- Section: Password Settings -->
+            <section class="settings-section">
+                <h2>Change Password</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="current-password">Current Password:</label>
+                        <input type="password" id="current-password" name="current-password" placeholder="••••••••">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password:</label>
+                        <input type="password" id="new-password" name="new-password" placeholder="••••••••">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-new-password">Confirm New Password:</label>
+                        <input type="password" id="confirm-new-password" name="confirm-new-password" placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="button save">Update Password</button>
+                </form>
+            </section>
+
+            <!-- Section: Application Settings -->
+            <section class="settings-section">
+                <h2>Application Settings</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="notifications">Email Notifications:</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="notifications" name="notifications" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="theme">App Theme:</label>
+                        <select id="theme" name="theme">
+                            <option value="light">Light (Default)</option>
+                            <option value="dark">Dark</option>
+                            <option value="system">System Preference</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="button save">Save Settings</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2023 TaskFlow Prototype. All rights reserved. <a href="index.html#documentation-info">About this Prototype</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+<!-- settings.html content ends here -->
